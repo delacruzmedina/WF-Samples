@@ -18,3 +18,6 @@ C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\bin\Debug\Common.
 C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\bin\Debug\Common.ActivityLibrary.pdb
 C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\bin\Debug\Common.Utility.pdb
 C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\obj\x86\Debug\Sample.VariableAndArgument.exe
+C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\bin\Debug\Sample.VariableAndArgument.exe.config
+C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\obj\x86\Debug\Sample.VariableAndArgument.exe
+C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\obj\x86\Debug\Sample.VariableAndArgument.pdb
