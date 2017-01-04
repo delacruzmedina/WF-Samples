@@ -1,0 +1,9 @@
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.Utility\bin\Debug\Common.Utility.dll
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.Utility\bin\Debug\Common.Utility.pdb
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.Utility\obj\Debug\Common.Utility.dll
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.Utility\obj\Debug\Common.Utility.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\Common.Utility\bin\Debug\Common.Utility.dll
+C:\Xamarin-Drive-Samples\WF-Samples\Common.Utility\bin\Debug\Common.Utility.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\Common.Utility\obj\Debug\Common.Utility.dll
+C:\Xamarin-Drive-Samples\WF-Samples\Common.Utility\obj\Debug\Common.Utility.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\Common.Utility\obj\Debug\Common.Utility.csprojResolveAssemblyReference.cache

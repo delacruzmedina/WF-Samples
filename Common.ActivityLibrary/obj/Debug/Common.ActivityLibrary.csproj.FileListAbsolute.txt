@@ -1,0 +1,8 @@
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.ActivityLibrary\bin\Debug\Common.ActivityLibrary.dll
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.ActivityLibrary\bin\Debug\Common.ActivityLibrary.pdb
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.ActivityLibrary\obj\Debug\Common.ActivityLibrary.dll
+C:\Xamarin-Drive-Samples\WF\HelloWorld\Common.ActivityLibrary\obj\Debug\Common.ActivityLibrary.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\Common.ActivityLibrary\bin\Debug\Common.ActivityLibrary.dll
+C:\Xamarin-Drive-Samples\WF-Samples\Common.ActivityLibrary\bin\Debug\Common.ActivityLibrary.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\Common.ActivityLibrary\obj\Debug\Common.ActivityLibrary.dll
+C:\Xamarin-Drive-Samples\WF-Samples\Common.ActivityLibrary\obj\Debug\Common.ActivityLibrary.pdb
