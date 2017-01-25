@@ -1,0 +1,4 @@
+obj\x86\Debug\_BugFlow.Sample.g.cs
+obj\x86\Debug\Workflow1.g.cs
+obj\x86\Debug\BugFlow.Sample_Workflow1_BeforeInitializeComponentHelper.cs
+C:\Xamarin-Drive-Samples\WF-Samples\BugFlow.Sample\BugFlow.Sample\obj\x86\Debug\BugFlow.Sample_Workflow1_CompiledExpressionRoot.cs

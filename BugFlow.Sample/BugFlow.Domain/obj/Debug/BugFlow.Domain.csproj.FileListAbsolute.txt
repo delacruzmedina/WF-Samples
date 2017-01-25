@@ -1,0 +1,8 @@
+C:\Projects\Personal\WF\BugFlow.Sample\BugFlow.Domain\bin\Debug\BugFlow.Domain.dll
+C:\Projects\Personal\WF\BugFlow.Sample\BugFlow.Domain\bin\Debug\BugFlow.Domain.pdb
+C:\Projects\Personal\WF\BugFlow.Sample\BugFlow.Domain\obj\Debug\BugFlow.Domain.dll
+C:\Projects\Personal\WF\BugFlow.Sample\BugFlow.Domain\obj\Debug\BugFlow.Domain.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\BugFlow.Sample\BugFlow.Domain\bin\Debug\BugFlow.Domain.dll
+C:\Xamarin-Drive-Samples\WF-Samples\BugFlow.Sample\BugFlow.Domain\bin\Debug\BugFlow.Domain.pdb
+C:\Xamarin-Drive-Samples\WF-Samples\BugFlow.Sample\BugFlow.Domain\obj\Debug\BugFlow.Domain.dll
+C:\Xamarin-Drive-Samples\WF-Samples\BugFlow.Sample\BugFlow.Domain\obj\Debug\BugFlow.Domain.pdb

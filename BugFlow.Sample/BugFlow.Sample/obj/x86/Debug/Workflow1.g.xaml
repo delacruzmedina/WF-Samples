@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bs:Workflow1 xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bd="clr-namespace:BugFlow.Domain;assembly=BugFlow.Domain" xmlns:bs="clr-namespace:BugFlow.Sample;assembly=BugFlow.Sample" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>BugFlow.Domain</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>BugFlow.Domain</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>BugFlow.Sample</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <bs:Workflow1.Implementation>
+    <StateMachine>
+      <StateMachine.InitialState>
+        <State x:Name="__ReferenceID3" DisplayName="BugInitialize">
+          <State.Entry>
+            <Sequence>
+              <WriteLine>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">string.Format("BUG {0} is generated:", new Random().Next(99))</mca:CSharpValue>
+                </InArgument>
+              </WriteLine>
+              <WriteLine Text="Please enter Bug Status: " />
+              <Assign>
+                <Assign.To>
+                  <OutArgument x:TypeArguments="bd:BugStatus">
+                    <mca:CSharpReference x:TypeArguments="bd:BugStatus">BugState</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="bd:BugStatus">
+                    <mca:CSharpValue x:TypeArguments="bd:BugStatus">Helper .ConvertBugStatus(Convert.ToInt32(Console.ReadLine()))</mca:CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </State.Entry>
+          <State.Transitions>
+            <Transition DisplayName="BugOpened">
+              <Transition.Condition>
+                <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.OPEN</mca:CSharpValue>
+              </Transition.Condition>
+              <Transition.To>
+                <State x:Name="__ReferenceID4" DisplayName="BugOpen">
+                  <State.Entry>
+                    <Sequence>
+                      <WriteLine Text="Bug is opened" />
+                      <WriteLine Text="Please Enter Bug Status:(2,3,5) " />
+                      <Assign>
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="bd:BugStatus">
+                            <mca:CSharpReference x:TypeArguments="bd:BugStatus">BugState</mca:CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="bd:BugStatus">
+                            <mca:CSharpValue x:TypeArguments="bd:BugStatus">Helper.ConvertBugStatus(Convert.ToInt32(Console.ReadLine()))</mca:CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </State.Entry>
+                  <State.Transitions>
+                    <Transition DisplayName="OnOpenedToAssign">
+                      <Transition.Condition>
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.ASSIGNED</mca:CSharpValue>
+                      </Transition.Condition>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID0" DisplayName="BugAssigned">
+                          <State.Entry>
+                            <Sequence>
+                              <WriteLine Text="Bug is assigned to hiren" />
+                              <WriteLine Text="Enter Bug status (3,4) :" />
+                              <Assign>
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="bd:BugStatus">
+                                    <mca:CSharpReference x:TypeArguments="bd:BugStatus">BugState</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="bd:BugStatus">
+                                    <mca:CSharpValue x:TypeArguments="bd:BugStatus">Helper.ConvertBugStatus(Convert.ToInt32(Console.ReadLine()))</mca:CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </State.Entry>
+                          <State.Transitions>
+                            <Transition DisplayName="OnAssignToResolve">
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.RESOLVED</mca:CSharpValue>
+                              </Transition.Condition>
+                              <Transition.To>
+                                <State x:Name="__ReferenceID5" DisplayName="BugResolved">
+                                  <State.Entry>
+                                    <Sequence>
+                                      <WriteLine Text="Bug is resolved." />
+                                      <WriteLine Text="Please enter bug status (5): " />
+                                      <Assign>
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="bd:BugStatus">
+                                            <mca:CSharpReference x:TypeArguments="bd:BugStatus">BugState</mca:CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="bd:BugStatus">
+                                            <mca:CSharpValue x:TypeArguments="bd:BugStatus">Helper.ConvertBugStatus(Convert.ToInt32(Console.ReadLine()))</mca:CSharpValue>
+                                          </InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </State.Entry>
+                                  <State.Transitions>
+                                    <Transition DisplayName="OnResolvedToClose">
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.CLOSED</mca:CSharpValue>
+                                      </Transition.Condition>
+                                      <Transition.To>
+                                        <State x:Name="__ReferenceID1" DisplayName="BugClosed">
+                                          <State.Entry>
+                                            <WriteLine Text="Bug is closed." />
+                                          </State.Entry>
+                                          <State.Transitions>
+                                            <Transition DisplayName="T1">
+                                              <Transition.To>
+                                                <State x:Name="__ReferenceID6" DisplayName="FinalState" IsFinal="True">
+                                                  <State.Entry>
+                                                    <WriteLine Text="Workflow is completed." />
+                                                  </State.Entry>
+                                                </State>
+                                              </Transition.To>
+                                            </Transition>
+                                          </State.Transitions>
+                                        </State>
+                                      </Transition.To>
+                                    </Transition>
+                                  </State.Transitions>
+                                </State>
+                              </Transition.To>
+                            </Transition>
+                            <Transition DisplayName="OnAssignedToChanged">
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.CHANGED</mca:CSharpValue>
+                              </Transition.Condition>
+                              <Transition.To>
+                                <State x:Name="__ReferenceID2" DisplayName="BugChanged">
+                                  <State.Entry>
+                                    <Sequence>
+                                      <WriteLine Text="Bug is changed" />
+                                      <WriteLine Text="Please enter bug status (2): " />
+                                      <Assign>
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="bd:BugStatus">
+                                            <mca:CSharpReference x:TypeArguments="bd:BugStatus">BugState</mca:CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="bd:BugStatus">
+                                            <mca:CSharpValue x:TypeArguments="bd:BugStatus">Helper.ConvertBugStatus(Convert.ToInt32(Console.ReadLine()))</mca:CSharpValue>
+                                          </InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </State.Entry>
+                                  <State.Transitions>
+                                    <Transition DisplayName="OnChangedToAssign" To="{x:Reference __ReferenceID0}">
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.ASSIGNED</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                  </State.Transitions>
+                                </State>
+                              </Transition.To>
+                            </Transition>
+                          </State.Transitions>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                    <Transition DisplayName="OnOpenToClosed" To="{x:Reference __ReferenceID1}">
+                      <Transition.Condition>
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.CLOSED</mca:CSharpValue>
+                      </Transition.Condition>
+                    </Transition>
+                    <Transition DisplayName="OnOpenToChanged" To="{x:Reference __ReferenceID2}">
+                      <Transition.Condition>
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">BugState == BugStatus.CHANGED</mca:CSharpValue>
+                      </Transition.Condition>
+                    </Transition>
+                  </State.Transitions>
+                </State>
+              </Transition.To>
+            </Transition>
+          </State.Transitions>
+        </State>
+      </StateMachine.InitialState>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="bd:BugStatus" Name="BugState" />
+        <Variable x:TypeArguments="x:Int32" Name="BugStatusId" />
+      </StateMachine.Variables>
+      <sads:DebugSymbol.Symbol>9xDns0RFEYQLXPTgXDAOsniZUEM6XFhhbWFyaW4tRHJpdmUtU2FtcGxlc1xXRi1TYW1wbGVzXEJ1Z0Zsb3cuU2FtcGxlXEJ1Z0Zsb3cuU2FtcGxlXFdvcmtmbG93MS54YW1sPCkD7AESAgEBKwfeAQ8CAVxID9oBFwIBRGEXzAEfAgEvrgEfyAEnAgEdeh+mAScCAQuTASeiAS8CAQaaAS+eATcCAQItC0AWAgFiRQ9FaAIBXkoTWR4CAVBeF150AgFM0QEX0QFyAgFJ1gEX1gFzAgFGYxtyJgIBOHcfd3wCATSrAR+rAXsCATGwASO/AS4CASPEASfEAYQBAgEffCOLAS4CARGQASeQAYIBAgENlQErlQF8AgEJnAEznAGNAQIBBC4NMhkCAWwzDTNpAgFqNA0/FgIBY0sVS2UCAVpMFUx4AgFYTRVYHgIBUWQdZHgCAUJlHWV4AgFAZh1xJgIBObEBJbEBdgIBLbIBJbIBhQECASuzASW+AS4CASR9JX15AgEbfiV+hgECARl/JYoBLgIBEpUBaZUBeQIBCpwBcpwBigECAQUwETCMAQIBbTNLM2YCAWs8EzySAQIBZzcTN2UCAWRLU0tiAgFbTFNMdQIBWVUbVZkBAgFVUBtQbQIBUmRbZHUCAUNlW2V1AgFBbiNuoQECAT1pI2l1AgE6sQFjsQFzAgEusgFjsgGCAQIBLLsBK7sBqQECASi2ASu2AX0CASV9ZH12AgEcfmR+gwECARqHASuHAakBAgEWggErggF9AgET</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </bs:Workflow1.Implementation>
+</bs:Workflow1>
