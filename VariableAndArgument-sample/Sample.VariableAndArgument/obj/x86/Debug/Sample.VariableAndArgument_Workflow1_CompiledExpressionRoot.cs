@@ -1,66 +1,66 @@
 namespace Sample.VariableAndArgument {
     
-    #line 21 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 21 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System;
     
     #line default
     #line hidden
     
-    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Collections;
     
     #line default
     #line hidden
     
-    #line 22 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 22 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Collections.Generic;
     
     #line default
     #line hidden
     
-    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Activities;
     
     #line default
     #line hidden
     
-    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Activities.Expressions;
     
     #line default
     #line hidden
     
-    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Activities.Statements;
     
     #line default
     #line hidden
     
-    #line 23 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 23 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Data;
     
     #line default
     #line hidden
     
-    #line 24 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 24 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Linq;
     
     #line default
     #line hidden
     
-    #line 25 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 25 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Text;
     
     #line default
     #line hidden
     
-    #line 26 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 26 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using Sample.VariableAndArgument;
     
     #line default
     #line hidden
     
-    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\Sample.VariableAndArgument\Workflow1.xaml"
+    #line 1 "C:\Xamarin-Drive-Samples\WF-Samples\VariableAndArgument-sample\Sample.VariableAndArgument\Workflow1.xaml"
     using System.Activities.XamlIntegration;
     
     #line default
@@ -93,7 +93,7 @@ namespace Sample.VariableAndArgument {
                 this.dataContextActivities = Workflow1_TypedDataContext1_ForReadOnly.GetDataContextActivitiesHelper(this.rootActivity, this.forImplementation);
             }
             if ((expressionId == 0)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext1_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 2);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext1_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 3);
                 if ((cachedCompiledDataContext[0] == null)) {
                     cachedCompiledDataContext[0] = new Workflow1_TypedDataContext1_ForReadOnly(locations, activityContext, true);
                 }
@@ -101,12 +101,20 @@ namespace Sample.VariableAndArgument {
                 return valDataContext0.ValueType___Expr0Get();
             }
             if ((expressionId == 1)) {
-                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext2_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 2);
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext2.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 3);
                 if ((cachedCompiledDataContext[1] == null)) {
-                    cachedCompiledDataContext[1] = new Workflow1_TypedDataContext2_ForReadOnly(locations, activityContext, true);
+                    cachedCompiledDataContext[1] = new Workflow1_TypedDataContext2(locations, activityContext, true);
                 }
-                Workflow1_TypedDataContext2_ForReadOnly valDataContext1 = ((Workflow1_TypedDataContext2_ForReadOnly)(cachedCompiledDataContext[1]));
-                return valDataContext1.ValueType___Expr1Get();
+                Workflow1_TypedDataContext2 refDataContext1 = ((Workflow1_TypedDataContext2)(cachedCompiledDataContext[1]));
+                return refDataContext1.GetLocation<Sample.VariableAndArgument.Person>(refDataContext1.ValueType___Expr1Get, refDataContext1.ValueType___Expr1Set, expressionId, this.rootActivity, activityContext);
+            }
+            if ((expressionId == 2)) {
+                System.Activities.XamlIntegration.CompiledDataContext[] cachedCompiledDataContext = Workflow1_TypedDataContext2_ForReadOnly.GetCompiledDataContextCacheHelper(this.dataContextActivities, activityContext, this.rootActivity, this.forImplementation, 3);
+                if ((cachedCompiledDataContext[2] == null)) {
+                    cachedCompiledDataContext[2] = new Workflow1_TypedDataContext2_ForReadOnly(locations, activityContext, true);
+                }
+                Workflow1_TypedDataContext2_ForReadOnly valDataContext2 = ((Workflow1_TypedDataContext2_ForReadOnly)(cachedCompiledDataContext[2]));
+                return valDataContext2.ValueType___Expr2Get();
             }
             return null;
         }
@@ -123,8 +131,12 @@ namespace Sample.VariableAndArgument {
                 return valDataContext0.ValueType___Expr0Get();
             }
             if ((expressionId == 1)) {
-                Workflow1_TypedDataContext2_ForReadOnly valDataContext1 = new Workflow1_TypedDataContext2_ForReadOnly(locations, true);
-                return valDataContext1.ValueType___Expr1Get();
+                Workflow1_TypedDataContext2 refDataContext1 = new Workflow1_TypedDataContext2(locations, true);
+                return refDataContext1.GetLocation<Sample.VariableAndArgument.Person>(refDataContext1.ValueType___Expr1Get, refDataContext1.ValueType___Expr1Set);
+            }
+            if ((expressionId == 2)) {
+                Workflow1_TypedDataContext2_ForReadOnly valDataContext2 = new Workflow1_TypedDataContext2_ForReadOnly(locations, true);
+                return valDataContext2.ValueType___Expr2Get();
             }
             return null;
         }
@@ -139,10 +151,16 @@ namespace Sample.VariableAndArgument {
                 expressionId = 0;
                 return true;
             }
+            if (((isReference == true) 
+                        && ((expressionText == "varCandidate") 
+                        && (Workflow1_TypedDataContext2.Validate(locations, true, 0) == true)))) {
+                expressionId = 1;
+                return true;
+            }
             if (((isReference == false) 
                         && ((expressionText == "varCandidate.Name") 
                         && (Workflow1_TypedDataContext2_ForReadOnly.Validate(locations, true, 0) == true)))) {
-                expressionId = 1;
+                expressionId = 2;
                 return true;
             }
             expressionId = -1;
@@ -164,7 +182,10 @@ namespace Sample.VariableAndArgument {
                 return new Workflow1_TypedDataContext1_ForReadOnly(locationReferences).@__Expr0GetTree();
             }
             if ((expressionId == 1)) {
-                return new Workflow1_TypedDataContext2_ForReadOnly(locationReferences).@__Expr1GetTree();
+                return new Workflow1_TypedDataContext2(locationReferences).@__Expr1GetTree();
+            }
+            if ((expressionId == 2)) {
+                return new Workflow1_TypedDataContext2_ForReadOnly(locationReferences).@__Expr2GetTree();
             }
             return null;
         }
@@ -401,7 +422,7 @@ namespace Sample.VariableAndArgument {
             
             internal System.Linq.Expressions.Expression @__Expr0GetTree() {
                 
-                #line 50 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                #line 50 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
         argHeight > 5.60;
                 
@@ -413,7 +434,7 @@ namespace Sample.VariableAndArgument {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public bool @__Expr0Get() {
                 
-                #line 50 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                #line 50 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
                 return 
         argHeight > 5.60;
                 
@@ -502,6 +523,50 @@ namespace Sample.VariableAndArgument {
                 base.SetLocationsOffset(locationsOffset);
             }
             
+            internal System.Linq.Expressions.Expression @__Expr1GetTree() {
+                
+                #line 62 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                System.Linq.Expressions.Expression<System.Func<Sample.VariableAndArgument.Person>> expression = () => 
+              varCandidate;
+                
+                #line default
+                #line hidden
+                return base.RewriteExpressionTree(expression);
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public Sample.VariableAndArgument.Person @__Expr1Get() {
+                
+                #line 62 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                return 
+              varCandidate;
+                
+                #line default
+                #line hidden
+            }
+            
+            public Sample.VariableAndArgument.Person ValueType___Expr1Get() {
+                this.GetValueTypeValues();
+                return this.@__Expr1Get();
+            }
+            
+            [System.Diagnostics.DebuggerHiddenAttribute()]
+            public void @__Expr1Set(Sample.VariableAndArgument.Person value) {
+                
+                #line 62 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                
+              varCandidate = value;
+                
+                #line default
+                #line hidden
+            }
+            
+            public void ValueType___Expr1Set(Sample.VariableAndArgument.Person value) {
+                this.GetValueTypeValues();
+                this.@__Expr1Set(value);
+                this.SetValueTypeValues();
+            }
+            
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {
                 if (((validateLocationCount == true) 
                             && (locationReferences.Count < 4))) {
@@ -561,9 +626,9 @@ namespace Sample.VariableAndArgument {
                 base.SetLocationsOffset(locationsOffset);
             }
             
-            internal System.Linq.Expressions.Expression @__Expr1GetTree() {
+            internal System.Linq.Expressions.Expression @__Expr2GetTree() {
                 
-                #line 61 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                #line 68 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
             varCandidate.Name;
                 
@@ -573,9 +638,9 @@ namespace Sample.VariableAndArgument {
             }
             
             [System.Diagnostics.DebuggerHiddenAttribute()]
-            public string @__Expr1Get() {
+            public string @__Expr2Get() {
                 
-                #line 61 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
+                #line 68 "C:\XAMARIN-DRIVE-SAMPLES\WF-SAMPLES\VARIABLEANDARGUMENT-SAMPLE\SAMPLE.VARIABLEANDARGUMENT\WORKFLOW1.XAML"
                 return 
             varCandidate.Name;
                 
@@ -583,9 +648,9 @@ namespace Sample.VariableAndArgument {
                 #line hidden
             }
             
-            public string ValueType___Expr1Get() {
+            public string ValueType___Expr2Get() {
                 this.GetValueTypeValues();
-                return this.@__Expr1Get();
+                return this.@__Expr2Get();
             }
             
             public new static bool Validate(System.Collections.Generic.IList<System.Activities.LocationReference> locationReferences, bool validateLocationCount, int offset) {

@@ -57,6 +57,13 @@
           <Variable x:TypeArguments="local:Person" Name="varCandidate" />
         </Sequence.Variables>
         <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="AskProfile" TargetType="local:Helper" />
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="local:Person">
+              <mca:CSharpReference x:TypeArguments="local:Person">varCandidate</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+        </Assign>
         <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_3">
           <InArgument x:TypeArguments="x:String">
             <mca:CSharpValue x:TypeArguments="x:String">varCandidate.Name</mca:CSharpValue>
@@ -67,13 +74,14 @@
     <If.Else>
       <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Sorry!! You are not qualified for examination of coprs." />
     </If.Else>
-    <sads:DebugSymbol.Symbol>d01DOlxYYW1hcmluLURyaXZlLVNhbXBsZXNcV0YtU2FtcGxlc1xTYW1wbGUuVmFyaWFibGVBbmRBcmd1bWVudFxXb3JrZmxvdzEueGFtbAgwA0cIAgEBMwkzWwIBAjcHQRICAQhEB0SBAQIBBjsJO3wCAQ88CUAVAgEJREVEfgIBBz4NPlwCAQo=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2hDOlxYYW1hcmluLURyaXZlLVNhbXBsZXNcV0YtU2FtcGxlc1xWYXJpYWJsZUFuZEFyZ3VtZW50LXNhbXBsZVxTYW1wbGUuVmFyaWFibGVBbmRBcmd1bWVudFxXb3JrZmxvdzEueGFtbAowA04IAgEBMwkzWwIBAjcHSBICAQhLB0uBAQIBBjsJO3wCARU8CUISAgEPQwlHFQIBCUtFS34CAQc/Dz9lAgEQRQ1FXAIBCg==</sads:DebugSymbol.Symbol>
   </If>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="218,130" />
-      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="218,62" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="240,356">
+      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="242,130" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="264,458">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -81,8 +89,8 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="210,62" />
-      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="475,506" />
-      <sap2010:ViewStateData Id="AsyncInvoke.Workflow1_1" sap:VirtualizedContainerService.HintSize="515,586" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="499,608" />
+      <sap2010:ViewStateData Id="AsyncInvoke.Workflow1_1" sap:VirtualizedContainerService.HintSize="539,688" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

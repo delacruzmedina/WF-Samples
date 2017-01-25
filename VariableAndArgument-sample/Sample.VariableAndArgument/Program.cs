@@ -3,12 +3,14 @@ using System.Linq;
 using System.Activities;
 using System.Activities.Statements;
 using Common.Utility;
+using Sample.VariableAndArgument;
 
 namespace Sample.VariableAndArgument
 {
-
+    
     class Program
     {
+        public static Activity workflow1;
         static void Main(string[] args)
         {
             double CandidateHeight = 0.00;
@@ -20,7 +22,7 @@ namespace Sample.VariableAndArgument
             if (double.TryParse(height, out CandidateHeight))
             {
 
-                Activity workflow1 = new Workflow1()
+                workflow1 = new Workflow1()
                 {
                     argHeight = CandidateHeight
                 };
@@ -56,6 +58,9 @@ namespace Sample.VariableAndArgument
 
             ConsoleHelper.WriteLineInColor(ConsoleColor.Gray, "Please Enter your country:");
             person.Country = Console.ReadLine();
+
+
+            
 
             return person;
         }

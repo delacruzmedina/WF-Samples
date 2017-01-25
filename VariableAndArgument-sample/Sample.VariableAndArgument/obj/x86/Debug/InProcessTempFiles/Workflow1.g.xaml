@@ -42,6 +42,13 @@
             <Variable x:TypeArguments="local:Person" Name="varCandidate" />
           </Sequence.Variables>
           <InvokeMethod MethodName="AskProfile" TargetType="local:Helper" />
+          <Assign>
+            <Assign.To>
+              <OutArgument x:TypeArguments="local:Person">
+                <mca:CSharpReference x:TypeArguments="local:Person">varCandidate</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+          </Assign>
           <WriteLine>
             <InArgument x:TypeArguments="x:String">
               <mca:CSharpValue x:TypeArguments="x:String">varCandidate.Name</mca:CSharpValue>
@@ -52,7 +59,7 @@
       <If.Else>
         <WriteLine Text="Sorry!! You are not qualified for examination of coprs." />
       </If.Else>
-      <sads:DebugSymbol.Symbol>d01DOlxYYW1hcmluLURyaXZlLVNhbXBsZXNcV0YtU2FtcGxlc1xTYW1wbGUuVmFyaWFibGVBbmRBcmd1bWVudFxXb3JrZmxvdzEueGFtbAgwA0cIAgEBMwkzWwIBAjcHQRICAQhEB0SBAQIBBjsJO3wCAQ88CUAVAgEJREVEfgIBBz4NPlwCAQo=</sads:DebugSymbol.Symbol>
+      <sads:DebugSymbol.Symbol>d2hDOlxYYW1hcmluLURyaXZlLVNhbXBsZXNcV0YtU2FtcGxlc1xWYXJpYWJsZUFuZEFyZ3VtZW50LXNhbXBsZVxTYW1wbGUuVmFyaWFibGVBbmRBcmd1bWVudFxXb3JrZmxvdzEueGFtbAowA04IAgEBMwkzWwIBAjcHSBICAQhLB0uBAQIBBjsJO3wCARU8CUISAgEPQwlHFQIBCUtFS34CAQc/Dz9lAgEQRQ1FXAIBCg==</sads:DebugSymbol.Symbol>
     </If>
   </local:Workflow1.Implementation>
 </local:Workflow1>
