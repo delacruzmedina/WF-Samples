@@ -12,7 +12,7 @@ namespace StateMachineGame.Sample
         {
             Activity workflow1 = new Workflow1();
             WorkflowInvoker.Invoke(workflow1);
-
+            Console.WriteLine("Completed");
             Console.ReadLine();
         }
     }
